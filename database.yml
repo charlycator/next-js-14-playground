@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+
+  db:
+    container_name: supertokens-db
+    image: registry.supertokens.io/supertokens/supertokens-postgresql
+    restart: always
+    ports:
+      - 3567:3567
+    environment:
+      POSTGRESQL_USER: username
+      POSTGRESQL_PASSWORD: password
+      POSTGRESQL_PORT: 5423
+      POSTGRESQL_DATABASE_NAME: supertokens
+      POSTGRESQL_HOST: host
